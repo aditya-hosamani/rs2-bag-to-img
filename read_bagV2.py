@@ -5,11 +5,7 @@ import cv2
 i = 0
 try:
     config = rs.config()
-    #rs.config.enable_device_from_file(config, "20201029_160223.bag", repeat_playback=False)
-    #rs.config.enable_device_from_file(config, "../20201215_221426.bag", repeat_playback=False)
-    #rs.config.enable_device_from_file(config, "/home/xenon/Downloads/D435i.bag", repeat_playback=False)
-    #rs.config.enable_device_from_file(config, "/home/xenon/Downloads/bagRecord.bag", repeat_playback=False)
-    rs.config.enable_device_from_file(config, "/home/xenon/Documents/testProj/rs_rgbd_split/20210113_203817.bag", repeat_playback=False)
+    rs.config.enable_device_from_file(config, "rosbag_file.bag", repeat_playback=False)
     pipeline = rs.pipeline()
     profile = pipeline.start(config)
     playback = profile.get_device().as_playback()
